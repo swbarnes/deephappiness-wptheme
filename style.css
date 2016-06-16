@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Theme Specific Styles
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -891,4 +892,468 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# Theme Specific Styles
+--------------------------------------------------------------*/
+
+/* 
+	Color Scheme
+	Base Purple: 7a36ff;
+	Dark Purple: 4914b2;
+	Background Purple: 56417f;
+	Light Orange: ffab50;
+	Dark Orange: e87d3d;
+	Light Green: 17cc34;
+	Dark Green: 1db235;
+*/
+
+/* General */
+body {
+	font-family: 'Raleway', Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+/* Global */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway', Helvetica, sans-serif;
+	font-weight: bold;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h1, h2 {
+	margin: 0 0 40px;
+}
+
+h3 {
+	margin: 20px 0;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+p {
+	margin: 0 0 15px;
+}
+
+p.lead {
+	font-weight: normal;
+}
+
+a:link, a:visited {
+	color: #7a36ff;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #4914b2;
+	font-weight: bold;
+}
+
+#dh-menu a:link, #dh-menu a:visited, #dh-menu a:hover {
+	font-weight: normal;
+}
+
+blockquote {
+	border-left: 0;
+}
+
+button, input, .btn, a.btn {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	color: white;
+}
+
+.btn {
+	font-weight: bold;
+}
+
+.btn-danger {
+	background-color: #e87d3d;
+	border-color: #ce6f36;
+}
+
+.btn-danger:hover, .btn-danger:active, .btn-danger:focus {
+	background-color: #ffab50;
+	border-color: #bf803c;
+}
+
+.btn-primary {
+	background-color: #56417f;
+	border-color: #4500cc;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+	background-color: #894cff;
+	border-color: #5600ff;
+}
+
+.btn-success {
+	background-color: #1db235;
+	border-color: #1db235;
+}
+
+.btn-success:hover {
+	background-color: #17cc34;
+	border-color: #17cc34;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* Header */
+
+#top-banner {
+	background: #56417f url('../img/top-bg.jpg') no-repeat;
+	background-size: cover;
+	min-height: 175px;
+	padding-top: 50px;
+}
+
+nav.navbar {
+	margin-bottom: 0;
+}
+
+/* Layout */
+
+#opt-in {
+	background: #56417f;
+	padding: 20px 0 35px;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	font-size: 1.2em;
+}
+
+#opt-in p {
+	margin: 7px 0 0 0;
+}
+
+#opt-in input[type="text"], #opt-in input[type="email"] {
+	width: 275px;
+}
+
+#happier-now {
+	background: #56417f;
+	padding: 0;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+#happier-now .report-ad {
+	padding: 65px 0;
+}
+
+#happier-now p.lead {
+	font-size: 1.5em;
+}
+
+#happier-now p.report-title {
+	font-size: 1.8em;
+	font-weight: bold;
+	padding: 25px 0;
+}
+
+/* Layout */
+
+.row + .row {
+	margin-top: 20px;
+}
+
+form .row + .row {
+	margin-top: 0;
+}
+
+section {
+	padding: 40px 0;
+}
+
+section.main-content {
+	padding: 40px 0;
+}
+
+.section-header {
+	text-align: center;
+	padding-bottom: 0px;
+}
+
+section h2 {
+	margin: 20px 0 40px;
+}
+
+section h3 {
+	margin: 30px 0 10px;
+}
+
+#primary {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+footer {
+	background: #56417f;
+	color: white;
+	padding: 10px 0 10px;
+	font-size: 12px;
+}
+
+footer p {
+	margin: 5px 0 0;
+}
+
+footer p.copyright-text {
+	padding: 11px 0 0;
+}
+
+footer nav {
+	padding: 16px 0 0;
+}
+
+footer a:link, footer a:visited {
+	color: white;
+	font-weight: normal;
+}
+
+footer a:hover {
+	text-decoration: none;
+	color: #e87d3d;
+}
+
+footer li.subscribe-link a:link, footer li.subscribe-link a:visited {
+	font-weight: bold;
+	color: #e87d3d;
+}
+
+footer li.subscribe-link a:hover {
+	color: white;
+}
+
+/* Blog */
+
+.post,
+.widget,
+#comments {
+	position: relative;
+	border: solid 1px #ccc;
+	background: white;
+	margin: 0 0 40px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.post header,
+.post .post-excerpt,
+.post .post-body,
+#comments .comments-wrap {
+	padding: 20px;
+}
+
+.post header h1,
+.post header h3 {
+	margin: 0 0 15px;
+	padding: 0 0 15px;
+	border-bottom: solid 1px #ccc;
+}
+
+.post header h1 {
+	font-size: 24px;
+}
+
+.post-image {
+	height: auto;
+}
+
+.post-details {
+	font-size: 12px;
+	width: 90%;
+}
+
+.post-details i.fa {
+	padding-left: 10px;
+}
+
+.post-details i.fa:first-child {
+	padding-left: 0;
+}
+
+/* Widgets */
+
+.widget {
+	padding: 20px;
+}
+
+.widget h4 {
+	margin: 0 0 10px;
+	padding: 0 0 10px;
+	border-bottom: solid 1px #ddd;
+}
+
+.widget ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.widget ul li {
+	margin: 0 0 5px;
+}
+
+.widget ul li:hover {
+	position: relative;
+	left: 1px;
+}
+
+/* Comments */
+
+#comments h3 {
+	text-align: center;
+}
+
+#comments h4 {
+	font-size: 1.3em;
+}
+
+#comments ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#comments ol li {
+	background: rgba(0, 0, 0, 0.02);
+	padding: 10px 20px;
+	margin: 10px 0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: solid 1px rgba(0, 0, 0, 0.03);
+}
+
+#comments ol li ol.children {
+	list-style: none;
+	padding: 0;
+	font-size: 0.96em;
+}
+
+#leave-comment {
+	margin: 40px 0 0;
+	padding: 20px 0 0;
+	border-top: solid 1px #eee;
+}
+
+/* Forms */
+
+label {
+	display: block;
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+textarea {
+	color: #666;
+	border: solid 1px #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 6px 12px;
+}
+
+/* Media Queries */
+
+@media screen and ( max-width : 1199px ) {
+
+	#opt-in input[type="text"], #opt-in input[type="email"] {
+		width: 250px;
+	}
+
+	#happier-now .report-ad {
+		padding: 25px 0;
+	}
+
+	#happier-now p.report-title {
+		padding: 15px 0;
+	}
+
+}
+
+@media screen and ( max-width : 991px ) {
+
+	#opt-in input[type="text"], #opt-in input[type="email"] {
+		width: 425px;
+		margin: 7px 0 0;
+	}
+
+	#opt-in input[type="submit"] {
+		margin: 7px 0 0;
+		display: block;
+		width: 425px;
+	}
+
+	#happier-now p.lead {
+		font-size: 1.2em;
+	}
+
+	#happier-now p.report-title {
+		font-size: 1.4em;
+		padding: 0;
+		margin-bottom: 4px;
+	}
+
+}
+
+@media screen and ( max-width : 768px ) {
+
+	#opt-in input[type="text"], #opt-in input[type="email"] {
+		width: 425px;
+	}
+
+	#opt-in input[type="submit"] {
+		display: block;
+	}
+
+}
+
+@media screen and ( max-width : 767px ) {
+
+	#opt-in div.form-group {
+		margin-bottom: 10px;
+	}
+
+	#opt-in input[type="text"], #opt-in input[type="email"] {
+		width: 100%;
+	}
+
+	#opt-in input[type="submit"] {
+		width: 100%;
+	}
+
+	#happier-now .report-cover {
+		text-align: center;
+	}
+
+	#happier-now p.report-title {
+		margin: 10px 0 25px;
+	}
+
 }
