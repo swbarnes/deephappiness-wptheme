@@ -455,7 +455,7 @@ img {
 /* Header */
 
 #top-banner {
-	background: #56417f url('../img/top-bg.jpg') no-repeat;
+	background: #56417f url('/wp-content/themes/deephappiness/img/top-bg.jpg') no-repeat;
 	background-size: cover;
 	min-height: 175px;
 	padding-top: 50px;
