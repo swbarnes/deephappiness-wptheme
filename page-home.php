@@ -19,6 +19,9 @@ $free_report_introduction	= get_field( 'free_report_introduction' );
 $free_report_title			= get_field( 'free_report_title' );
 $free_report_subtitle		= get_field( 'free_report_subtitle' );
 $free_report_button_text	= get_field( 'free_report_button_text' );
+$about_me_headline			= get_field( 'about_me_headline' );
+$about_me_introduction		= get_field( 'about_me_introduction' );
+$about_me_content			= get_field( 'about_me_content' );
 
 get_header(); ?>
 
@@ -106,28 +109,18 @@ get_header(); ?>
 	<div class="container">
 
 		<div class="section-header">
-			<h2>Okay, so you want to know a bit more about where I'm coming from…</h2>
+			<h2><?php echo $about_me_title; ?></h2>
 		</div><!-- .section-header -->
 
 		<div class="row">
 
 			<div class="col-sm-8 col-sm-offset-2">
 
-				<p class="lead">It's true that I'm disabled, I have a severe form of muscular dystrophy. It's a progressive, muscle wasting, degenerative disease. My body continues to grow weaker and, someday, my muscular dystrophy will result in my death.</p>
+			<?php if( !empty($about_me_introduction) ) : ?>
+				<p class="lead"><?php echo $about_me_introduction; ?></p>
+			<?php endif; ?></p>
 
-				<p>Among other things, this means that I am confined to a wheelchair and my physical limitations basically result in a form of quadriplegia. My daily routine is dependent upon a caregiver assisting me with things as mundane as brushing my teeth or adjusting my head so I can access the chin controls to my wheelchair. If it weren't for the progress of modern technology, I might be entirely isolated.</p>
-
-				<p>With that said, I would definitely not characterize myself as someone with a poor quality of life. There are always things to be grateful for, and I delight in them daily. For example, my beautiful partner who cares for me. We love each other profoundly and have been together for more than 20 years.</p>
-
-				<p>While I believe in optimism and gratitude, I do want to make it clear that I don't believe in rose-colored glasses or new age nonsense. I'm not looking to make us all shiny-happy people.</p>
-
-				<p>Happiness can be found in real assessments of what's going on all around you. Because, often, our emotional state is based on a warped sort of cognitive illusion. Negative emotional reactions are often disproportionate to what we are actually facing.</p>
-
-				<p>These disproportionate reactions are rarely productive. Being aware of this tendency is the first step. Being aware that negative emotions are transient and often unproductive can allow you to begin seeing them in a new light.</p>
-
-				<p>When you start to recognize your own patterns of negative thoughts and emotions, then you are already halfway liberated from them.</p>
-
-				<p>I know something about this and, while I may still occasionally struggle, there are insights I can share that are scientifically backed,  that work for me, and have worked for people I know. If you're interested in learning more, <a href="/subscribe">please subscribe to my free newsletter and get my Happier Now report</a>.</p>
+				<?php echo $about_me_content; ?>
 			</div><!-- .col -->
 
 		</div><!-- .row -->
