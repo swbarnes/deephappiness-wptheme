@@ -11,11 +11,35 @@
 
 ?>
 
-	</div><!-- #content -->
-
-</div><!-- #page -->
-
 <?php wp_footer(); ?>
+
+<!-- Footer -->
+<footer>
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-sm-3">
+				<p><a href="/"><img src="<?php bloginfo( 'template_directory' ); ?>/img//footer-logo.png" alt="Deep Happiness"></a></p>
+			</div><!-- .col -->
+
+			<div class="col-sm-6">
+				<nav>
+					<ul class="list-unstyled list-inline">
+						<li><a href="/">Home</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li class="subscribe-link"><a href="/subscribe">Free Report</a></li>
+					</ul>
+				</nav>
+			</div><!-- .col -->
+
+			<div class="col-sm-3">
+				<p class="pull-right copyright-text">&copy; 2016 Jonathan Hinek</p>
+			</div><!-- .col -->
+
+		</div><!-- .row -->
+	</div><!-- .container -->
+</footer><!-- footer -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
