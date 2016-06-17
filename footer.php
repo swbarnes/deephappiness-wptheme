@@ -13,16 +13,15 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'deephappiness' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'deephappiness' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'deephappiness' ), 'deephappiness', '<a href="http://www.wheelchairshaun.com" rel="designer">Shaun Barnes</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="<?php bloginfo( 'template_directory' ); ?>/js/bootstrap.min.js"></script>
 
 </body>
 </html>
