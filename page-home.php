@@ -10,10 +10,15 @@
  */
 
 // Advanced Custom Fields
-$optin_lead_paragraph		= get_field('optin_lead_paragraph');
-$about_blog_headline		= get_field('about_blog_headline');
-$about_blog_introduction	= get_field('about_blog_introduction');
-$about_blog_content			= get_field('about_blog_content');
+$optin_lead_paragraph		= get_field( 'optin_lead_paragraph' );
+$about_blog_headline		= get_field( 'about_blog_headline' );
+$about_blog_introduction	= get_field( 'about_blog_introduction' );
+$about_blog_content			= get_field( 'about_blog_content' );
+$free_report_image			= get_field( 'free_report_image' );
+$free_report_introduction	= get_field( 'free_report_introduction' );
+$free_report_title			= get_field( 'free_report_title' );
+$free_report_subtitle		= get_field( 'free_report_subtitle' );
+$free_report_button_text	= get_field( 'free_report_button_text' );
 
 get_header(); ?>
 
@@ -83,12 +88,14 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3 report-cover">
-				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/img/happier-now.jpg" alt="book cover for 'Happier Now, 21 proven techniques to improve your outlook instantly'">
+			<?php if ( !empty($free_report_image) ) : // If user uploaded an image ?>
+				<img src="<?php echo $free_report_image['url']; ?>" alt="<?php echo $free_report_image['alt']; ?>">
+			<?php endif; ?>
 			</div>
 			<div class="col-sm-9 report-ad">
-				<p class="lead text-center">Subscribe today to receive our free report </p>
-				<p class="lead text-center report-title">Happier Now <br>21 Proven Techniques to Improve Your Outlook Instantly</p>
-				<p class="text-center"><a class="btn btn-lg btn-danger" href="/subscribe">Subscribe Now &raquo;</a></p>
+				<p class="lead text-center"><?php echo $free_report_introduction; ?></p>
+				<p class="lead text-center report-title"><?php echo $free_report_title; ?> <br><?php echo $free_report_subtitle; ?></p>
+				<p class="text-center"><a class="btn btn-lg btn-danger" href="/subscribe"><?php echo $free_report_button_text; ?> &raquo;</a></p>
 			</div>
 		</div><!-- .row -->
 	</div><!-- .container -->
