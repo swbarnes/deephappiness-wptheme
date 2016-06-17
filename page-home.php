@@ -9,6 +9,12 @@
  * @package Deep_Happiness
  */
 
+// Advanced Custom Fields
+$optin_lead_paragraph		= get_field('optin_lead_paragraph');
+$about_blog_headline		= get_field('about_blog_headline');
+$about_blog_introduction	= get_field('about_blog_introduction');
+$about_blog_content			= get_field('about_blog_content');
+
 get_header(); ?>
 
 <!-- Opt-in -->
@@ -17,7 +23,7 @@ get_header(); ?>
 		<div class="row">
 			
 			<div class="col-sm-12">
-				<p class="lead text-center"><strong>Subscribe to our mailing list.</strong> We'll send you the free report <em>Happier Now</em> as a thank you.</p>
+				<p class="lead text-center"><?php echo $optin_lead_paragraph; ?></p>
 			</div><!-- .col -->
 
 		</div><!-- .row -->
@@ -54,35 +60,17 @@ get_header(); ?>
 	<div class="container">
 
 		<div class="section-header">
-			<h2>Living and Loving Life, No Matter Its Obstacles</h2>
+			<h2><?php echo $about_blog_headline; ?></h2>
 		</div><!-- .section-header -->
 
 		<div class="row">
 
 			<div class="col-sm-8 col-sm-offset-2">
-				<p class="lead">A blog about cultivating thoughts in order to have a more positive outlook, and overcoming hardship and grief, while defeating fear and self-doubt.</p>
+			<?php if( !empty($about_blog_introduction) ) : ?>
+				<p class="lead"><?php echo $about_blog_introduction; ?></p>
+			<?php endif; ?>
 
-				<p>When I talk about happiness I'm not speaking of pleasure, nor of fleeting emotion.</p>
-
-				<p>Happiness is an optimal state of being. </p>
-
-				<p>Happiness is a deep sense of flourishing.</p>
-
-				<p>Happiness is the default state of a skillful mind.</p>
-
-				<p>In forthcoming articles you can expect subjects like increasing your happiness, finding love, overcoming grief, and defeating nagging doubts.</p>
-
-				<p>By subscribing now for future updates you will receive the free report <a href="/subscribe">Happier Now: 21 Proven Techniques to Improve Your Outlook Instantly</a>.</p>
-
-				<p>I make no claims at expertise, but these articles don't come about without a foundation in experience. I know something about living fully despite challenges.</p>
-
-				<p>I'm severely disabled with a form of muscular dystrophy that has left me quadriplegic. I've experienced the loss of loved ones, including my father, mother, and brother in early adulthood.</p>
-
-				<p>Despite these hardships, or perhaps because of them, I've learned to not only survive, but to find happiness and fulfillment. Not to mention love.</p>
-
-				<p>What I hope to do with this blog is share some of the struggle, some of the hope, and some of the new things learned along the way. This is to clarify things in my mind as much as for anyone else, but it's so much more fun to have others to bounce ideas off of and offer mutual support.</p>
-
-				<p><a href="/subscribe">Subscribe now</a> and follow along in this journey.</p>
+				<?php echo $about_blog_content; ?>
 			</div><!-- .col -->
 
 		</div><!-- .row -->
