@@ -1,12 +1,6 @@
 <?php
 /**
  * Template Name: Home Page
- *
- * The template for displaying the landing page or homepage.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package Deep_Happiness
  */
 
 get_header(); ?>
