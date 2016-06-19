@@ -40,7 +40,17 @@
 	</div><!-- post-image -->
 	<?php endif; ?>
 
+	<?php if ( is_single() ) : // is this the actual post? ?>
+
+	<div class="post-body">
+		<?php the_content( ); ?>
+	</div><!-- post-body -->
+
+	<?php else : // this is the excerpt ?>
+
 	<div class="post-excerpt">
 		<?php the_excerpt(); ?>
 	</div><!-- post-excerpt -->
+
+	<?php endif; ?>
 </article><!-- #post-## -->
