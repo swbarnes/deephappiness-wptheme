@@ -13,35 +13,34 @@
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h3 class="entry-title">', '</h1>' );
 			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 			}
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php deephappiness_posted_on(); ?>
-		</div><!-- .entry-meta -->
+
+		<div class="post-details">
+			<i class="fa fa-user"></i> <?php the_author(); ?>
+			<i class="fa fa-clock-o"></i> <time><?php the_date(); ?></time>
+			<i class="fa fa-folder-open"></i> <?php the_category( ', ' ); ?>
+			<?php the_tags( '<i class="fa fa-tags"></i> ', ', ', '' ); ?>
+			<i class="fa fa-comments"></i> <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
+
+			<?php edit_post_link( 'Edit', '<i class="fa fa-pencil"></i> ', '' ); ?>
+		</div><!-- post-details -->
+
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'deephappiness' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+	<?php if ( has_post_thumbnail() ) : ?>
+	<div class="post-image">
+		<?php the_post_thumbnail(); ?>
+	</div><!-- post-image -->
+	<?php endif; ?>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'deephappiness' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php deephappiness_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<div class="post-excerpt">
+		<?php the_excerpt(); ?>
+	</div><!-- post-excerpt -->
 </article><!-- #post-## -->
