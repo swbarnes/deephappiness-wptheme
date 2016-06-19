@@ -13,7 +13,7 @@
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
-				the_title( '<h3 class="entry-title">', '</h1>' );
+				the_title( '<h1 class="entry-title">', '</h1>' );
 			} else {
 				the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 			}
@@ -40,10 +40,10 @@
 	</div><!-- post-image -->
 	<?php endif; ?>
 
-	<?php if ( is_single() ) : // is this the actual post? ?>
+	<?php if ( is_single() ) : // is this the full post? ?>
 
 	<div class="post-body">
-		<?php the_content( ); ?>
+		<?php the_content(); ?>
 	</div><!-- post-body -->
 
 	<?php else : // this is the excerpt ?>
