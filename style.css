@@ -694,6 +694,27 @@ footer li.subscribe-link a:hover {
 	border-top: solid 1px #eee;
 }
 
+/* WordPress specific comment styles */
+#comments footer {
+	background: none;
+	color: inherit;
+}
+
+#comments footer a:link, #comments footer a:visited {
+	color: inherit;
+	font-weight: bold;
+}
+
+#comments footer a:hover {
+	color: inherit;
+	text-decoration: underline;
+}
+
+#comments .comment-metadata {
+	margin: 10px 0 0;
+}
+
+
 /* Forms */
 
 label {
