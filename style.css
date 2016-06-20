@@ -656,6 +656,10 @@ footer li.subscribe-link a:hover {
 	left: 1px;
 }
 
+.widget div.form-group:last-child{
+	margin-bottom: 0;
+}
+
 /* Comments */
 
 #comments h3 {
