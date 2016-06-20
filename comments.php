@@ -79,7 +79,7 @@ if ( post_password_required() ) {
 	<?php
 	endif;
 
-	comment_form();
+	comment_form( array('class_submit' => 'btn btn-primary') );
 	?>
 
 	</div><!-- comments-wrap -->
