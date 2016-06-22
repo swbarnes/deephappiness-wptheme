@@ -13,6 +13,7 @@ $free_report_introduction	= get_field( 'free_report_introduction' );
 $free_report_title			= get_field( 'free_report_title' );
 $free_report_subtitle		= get_field( 'free_report_subtitle' );
 $free_report_button_text	= get_field( 'free_report_button_text' );
+$free_report_button_link	= get_field( 'free_report_button_link' );
 
 ?>
 
@@ -28,7 +29,7 @@ $free_report_button_text	= get_field( 'free_report_button_text' );
 			<div class="col-sm-9 report-ad">
 				<p class="lead text-center"><?php echo $free_report_introduction; ?></p>
 				<p class="lead text-center report-title"><?php echo $free_report_title; ?> <br><?php echo $free_report_subtitle; ?></p>
-				<p class="text-center"><a class="btn btn-lg btn-danger" href="/subscribe"><?php echo $free_report_button_text; ?> &raquo;</a></p>
+				<p class="text-center"><a class="btn btn-lg btn-danger" href="<?php echo $free_report_button_link; ?>"><?php echo $free_report_button_text; ?> &raquo;</a></p>
 			</div>
 		</div><!-- .row -->
 	</div><!-- .container -->
