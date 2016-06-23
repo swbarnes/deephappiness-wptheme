@@ -22,7 +22,7 @@ get_header(); ?>
 
 				<div class="page-content">
 
-					<h2 class="404-suggest">How about a few suggestions?</h2>
+					<h2 class="404-suggest">How about a couple suggestions?</h2>
 
 					<?php
 						// Only show the widget if site has multiple categories.
@@ -60,7 +60,9 @@ get_header(); ?>
 
 		</main><!-- #main -->
 
-		<?php get_sidebar(); ?>
+		<aside class="col-sm-4 widget-area" role="complementary">
+			<?php dynamic_sidebar('sidebar-2'); ?>
+		</aside>
 
 	</div><!-- #primary -->
 </div><!-- .container -->
