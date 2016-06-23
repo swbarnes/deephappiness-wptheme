@@ -44,9 +44,7 @@ get_header(); ?>
 
 			</main><!-- #main -->
 
-			<aside class="col-sm-4">
-				<?php get_sidebar(); ?>
-			</aside>
+			<?php get_sidebar(); ?>
 		</div><!-- row#primary -->
 	</div><!-- container -->
 

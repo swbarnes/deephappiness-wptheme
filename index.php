@@ -52,11 +52,7 @@ get_header(); ?>
 			</main><!-- #main -->
 
 			<!-- Sidebar -->
-			<aside class="col-sm-4">
-
 			<?php get_sidebar(); ?>
-
-			</aside>
 
 		</div><!-- row#primary -->
 	</div><!-- container -->
