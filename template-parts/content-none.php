@@ -10,9 +10,9 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
+	<div class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'deephappiness' ); ?></h1>
-	</header><!-- .page-header -->
+	</div><!-- .page-header -->
 
 	<div class="page-content">
 		<?php
@@ -24,13 +24,13 @@
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'deephappiness' ); ?></p>
 			<?php
-				get_search_form();
+				get_template_part( 'template-parts/content', 'large_search_form' );
 
 		else : ?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'deephappiness' ); ?></p>
 			<?php
-				get_search_form();
+				get_template_part( 'template-parts/content', 'large_search_form' );
 
 		endif; ?>
 	</div><!-- .page-content -->
